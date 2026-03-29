@@ -1,0 +1,12 @@
+cff-version: 1.2.0
+title: GlacioVision Dataset
+authors:
+  - family-names: [Imran]
+    given-names: [Abubakar]
+  - family-names: [Saleem]
+    given-names: [Muhammad Sarmad]
+  - family-names: [Haider]
+    given-names: [Ali]
+doi: 10.5281/zenodo.19305311
+date-released: 2026
+license: CC-BY-4.0
