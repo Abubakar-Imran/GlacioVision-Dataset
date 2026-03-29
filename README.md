@@ -267,7 +267,7 @@ This dataset supports:
 ## License
 
 This dataset is released under:
-
+**Creative Commons Attribution 4.0 (CC-BY 4.0)**
 
 ---
 
