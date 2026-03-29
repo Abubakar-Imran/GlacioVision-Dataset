@@ -276,6 +276,42 @@ inference/{glacier}/
 
 ---
 
+## Running the Pipeline
+### 1. Process climate data
+python scripts/climate/process_climate.py \
+  --input_csv path/to/input.csv \
+  --output_dir data/climate/GlacierName
+
+## 2. Extract GEDI data
+python scripts/elevation/extract_gedi.py \
+  --input_dir data/gedi_raw \
+  --output_dir data/gedi_csv
+
+## 3. Stack rasters
+python scripts/preprocessing/stack_rasters.py \
+  --sentinel data/sentinel.tif \
+  --dem data/dem.tif \
+  --output data/stacked.tif
+
+## 4. Create raw dataset
+python scripts/dataset_creation/create_raw_dataset.py \
+  --base_dir data \
+  --output_dir data/raw \
+  --glaciers Glacier1 Glacier2 \
+  --years 2019 2020 2021 2022 2023 2024
+
+## 5. Generate patches
+python scripts/dataset_creation/create_patches.py \
+  --raw_dir data/raw \
+  --output_dir data/patches
+
+## 6. Create inference dataset
+python scripts/dataset_creation/create_inference_dataset.py \
+  --base_dir data \
+  --output_dir data/inference \
+  --glaciers Glacier1 Glacier2 \
+  --years 2019 2020 2021 2022 2023 2024
+
 ## Reproducibility
 
 All steps in this pipeline can be reproduced using the scripts provided in the `scripts/` directory. Users are expected to:
