@@ -8,6 +8,13 @@ The dataset integrates **satellite imagery, meteorological variables, and elevat
 
 ---
 
+## 📦 Dataset Access
+Download the dataset from Zenodo:
+
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.19305311.svg)](https://doi.org/10.5281/zenodo.19305311)
+
+---
+
 ## Key Features
 
 * Multi-year coverage: **2019–2024**
